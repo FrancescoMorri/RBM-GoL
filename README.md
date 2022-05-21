@@ -7,11 +7,9 @@ The idea is that, since the settings are very similar (a grid of 1s and 0s for G
 
 ## Activity
 In order to distinguis phases I defined a value associated to a configuration that I will call _activity_, defined as:
-<p align="center">
-  <img src="https://latex.codecogs.com/gif.image?%5Clarge%20%5Cdpi%7B100%7D%5Cbg%7Bblack%7Da_i%20=%5Cfrac%7B%5Csum_%7Ball%5C;cells%7D%20abs(state_%7Bi&plus;1%7D%20-%20state_i)%7D%7Bgrid%5C;size%7D"/>
-</p>
-and looking at the graph of this value we can see there are three cases: 
-<img src="https://latex.codecogs.com/gif.image?\inline&space;\dpi{110}\bg{black}a_i&space;=&space;0&space;\;\text{for&space;all}\;i>t*\;\text{(config&space;0)}\\a_i&space;\neq&space;0&space;\;\text{but&space;const&space;for&space;all}\;i>t*\;\text{(config&space;8)}\\a_i\;\text{oscillates&space;for&space;all}\;i>t*\;\text{(config&space;7)}"/>
+$$a_i = \frac{\sum_{all cells}abs(state_{i+1}-state_{i})}{sizegrid}$$
+and looking at the graph of this value we can see there are three cases: $a_i = 0$ for all $i>t*$ (config 0), $a_i \ne 0$ but const for all $i>t*$ (config 8), $a_i$ oscillates for all $i>t*$ (config 7).
+
 <p align="center">
   <img src="/images/act_intro.png"/>
  </p>
